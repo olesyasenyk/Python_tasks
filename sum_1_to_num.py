@@ -5,6 +5,3 @@ def summation(num):
         s+=n
         n+=1
     return s
-
-
-print (summation(20))
