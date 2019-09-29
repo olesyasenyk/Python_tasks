@@ -4,7 +4,7 @@ def solution(number):
     while x<number:
         if x%3==0 or x%5==0:
             l.append(x)
+        x+=1
     return sum(l)
 
 
-print (solution(20))
