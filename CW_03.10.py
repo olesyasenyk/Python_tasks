@@ -45,31 +45,47 @@
 
 # print(check_age (age))
 
-nums=input('Give two numbers separated by a comma: ')
+# '''This program calculates the ratio of two numbers entered by the user sequentially 
+# and separated by a comma (division by zero, syntactic errors, and other exceptions considered. 
+# Use else та finally.'''
 
-try:
-    a=(nums[0])
-    b=(nums[2])
-    if a is tystr:
-        raise TypeError
-    else:
-
-    #     
-    # if b==0.0:
-    #     raise ValueError
-
-#     elif nums[2] is not float:
-#         raise TypeError
-# except TypeError:
-#     print('Not a number')
-    # else:
-    #     print (a/b)
+# try:
+#     nums=input('Give two numbers separated by a comma: ')
+#     li=(nums.split(','))
+#     result=float(li[0])/float(li[1])
+# except ZeroDivisionError:
+#     print ('Cannot divide by zero.')
 # except ValueError:
-#     print('Division by zero')
-except TypeError:
-    print('Not a number')
+#     print ('Please enter numbers separated by comma like this: 1, 2.')
+# else:
+#     print (result)
+# finally:
+#     print ('Thank you!')
+
+'''This program analyses the input number and produces the day of the week. Exceptions: numbers 8+, 
+chars other than digits'''
+try:
+    num=int(input('Give a number between 1 and 7: '))
+    if num==1:
+        print ('Monday')
+    elif num==2:
+        print ('Tuesday')
+    elif num==3:
+        print ('Wednesday')
+    elif num==4:
+        print ('Thirsday')
+    elif num==5:
+        print ('Friday')
+    elif num==6:
+        print ('Saturday')
+    elif num==7:
+        print ('Sunday')
+    elif num>7:
+        raise ValueError
+except ValueError:
+    print ('Enter a number between 1 and 7 including.')
 finally:
-    print('Thank you')
+    print ('Thank you.')
 
 
 
