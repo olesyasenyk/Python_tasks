@@ -55,3 +55,25 @@
 # li = [12, 26, 98, 550]
 # li1=list(map(lambda km: round(km*1.6), li))
 # print(li1)
+
+## Знайти найбільший елемент в списку  використовуючи функцію reduce
+# from functools import reduce
+# li = [12, 26, 98, 550]
+# def bigger_number (a,b):
+#     if a>b:
+#         return a
+#     else:
+#         return b
+# print(reduce(bigger_number, li, 0))
+
+##Перепишіть наступний код, використовуючи map, reduce і filter. 
+# Filter приймає функцію і колекцію. Повертає колекцію тих елементів, 
+# для яких функція повертає True.
+people = [{'name': 'Sam', 'height': 160}, {'name': 'Alex', 'height': 80}, {'name': 'Jack'}] 
+height_total = 0 
+height_count = 0 
+for person in people: 
+    if 'height' in person: 
+        height_total += person['height'] 
+        height_count += 1 
+print(height_total)
