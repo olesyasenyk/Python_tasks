@@ -67,8 +67,8 @@
 # print(reduce(bigger_number, li, 0))
 
 ##Перепишіть наступний код, використовуючи map, reduce і filter. 
-# Filter приймає функцію і колекцію. Повертає колекцію тих елементів, 
-# для яких функція повертає True.
+## Filter приймає функцію і колекцію. Повертає колекцію тих елементів, 
+## для яких функція повертає True.
 people = [{'name': 'Sam', 'height': 160}, {'name': 'Alex', 'height': 80}, {'name': 'Jack'}] 
 height_total = 0 
 height_count = 0 
