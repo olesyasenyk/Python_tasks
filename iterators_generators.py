@@ -69,11 +69,20 @@
 ##Перепишіть наступний код, використовуючи map, reduce і filter. 
 # Filter приймає функцію і колекцію. Повертає колекцію тих елементів, 
 # для яких функція повертає True.
+# people = [{'name': 'Sam', 'height': 160}, {'name': 'Alex', 'height': 80}, {'name': 'Jack'}] 
+# height_total = 0 
+# height_count = 0 
+# for person in people: 
+#     if 'height' in person: 
+#         height_total += person['height'] 
+#         height_count += 1 
+# print(height_total)
+
+from functools import reduce
 people = [{'name': 'Sam', 'height': 160}, {'name': 'Alex', 'height': 80}, {'name': 'Jack'}] 
-height_total = 0 
-height_count = 0 
-for person in people: 
-    if 'height' in person: 
-        height_total += person['height'] 
-        height_count += 1 
-print(height_total)
+valid_people=filter(lambda person: 'height' in person, people) 
+height_total=reduce(lambda a, b: a + b['height'], valid_people,0)
+
+# height_total=reduce(lambda a, b: a + b['height'], filter(lambda person: 'height' in person, people),0) #the same in one line
+
+print (height_count)
